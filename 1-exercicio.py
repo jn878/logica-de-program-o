@@ -2,25 +2,17 @@ import os
 os.system("cls")
 
 
-#entrada
-print(" = solicitando dados = ")
-primeiro_numero = int(input("digite o primeiro numero: "))
-segundo_numero = int (input("digite o segundo numero: "))
+quantidade = int(input("escreva a quantidade maçãs: "))
 
 
 
-#processamento
-soma = primeiro_numero + segundo_numero
-subtracao = primeiro_numero - segundo_numero
-multiplicacao = primeiro_numero * segundo_numero
-divisao = primeiro_numero / segundo_numero
+if quantidade < 12:
+    preco = 1.30
+else:
+    preco = 1.0
+
+valor_total = quantidade * preco 
 
 
+print(F"valor total: {valor_total}")
 
-#saida
-print( "= exibindo dados = " )
-
-print("soma", soma)
-print("subtracao", subtracao)
-print("multiplicacao", multiplicacao)
-print("divisao", divisao)

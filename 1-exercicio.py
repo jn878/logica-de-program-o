@@ -1,18 +1,18 @@
-import os
+import os 
 os.system("cls")
 
+login = input("qual seu nome de usuario: ")
+senha = (input("digite sua senha: "))
 
-quantidade = int(input("escreva a quantidade maçãs: "))
+login_salvo = "andre"
+senha_salva = "123"
 
+login_esta_correto = login == login_salvo
+senha_esta_correta = senha = senha_salva
 
-
-if quantidade < 12:
-    preco = 1.30
+if login_esta_correto and senha_esta_correta:
+    print("bem vindo")
 else:
-    preco = 1.0
+    print("login ou senha invalidos")
 
-valor_total = quantidade * preco 
-
-
-print(F"valor total: {valor_total}")
 

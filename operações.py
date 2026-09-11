@@ -1,21 +1,19 @@
-numero_1  = float(input("digite o numero 1 "))
-numero_2 = float (input("digite o numero 2: "))
-caracter = input("digite o caracter operador: ")
+numero1 = float(input("digite o numero: "))
+numero2 = float(input("digite o numero: "))
+operação = input("digite a operação: ")
 
+soma = numero1 + numero2
+subtracao = numero1 - numero2
+multiplicacao = numero1 * numero2
+divisao = numero1 / numero2
 
-numero = numero_1 + numero_2
+match operação:
+    case "+":
+        print(f"resultado {soma}")
+    case "-":
+        print(f"resultado {subtracao}")
+    case "*":
+        print(f"resultado {multiplicacao}")
+    case "/":
+        (f"resultado {divisao}")
 
-soma = numero_1 + numero_2
-divisao = numero_1 / numero_2
-multiplicacao = numero_1 * numero_2
-subtracao = numero_1 - numero_2
-
-
-
-
-match numero:
-    case soma:
-        resultado_soma = print("este e o resultado")
-
-
-print(f"resultado{resultado_soma}")

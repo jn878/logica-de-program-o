@@ -1,4 +1,4 @@
-import os 
+import os
 os.system("cls")
 
 numero = int(input("digite um numero"))

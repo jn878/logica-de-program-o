@@ -11,11 +11,11 @@ print("kabum  ssd= 1    rtx 5090 = 2    memoria ram 16gb = 3")
 #while True:
     #numero = int(input("digite o numero do pedido: "))
     #if numero == 1:
-        #print(f"{numero}  hamburguer = 10$")
+        #print(f"{numero}  ssd = 10$")
     #elif numero == 2:
-        #print(f"{numero}  pastel = 9$")
+        #print(f"{numero}  rtx 5090 = 9$")
     #elif numero == 3:
-        #print(f"{numero} sonho = 7$")
+        #print(f"{numero} memoria ram = 7$")
     #break
 #else:
     #print("numero invalido")

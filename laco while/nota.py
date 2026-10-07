@@ -9,7 +9,7 @@ for i in range(3):
         nota = float(input(f"digite a {i+1} nota do aluno"))
         if nota <0 or nota >10:
             print("entre 0 e 10")
-
+            break
             print("calculos")
             print(f"\nnotas{i}")
             media = soma =+ i /3

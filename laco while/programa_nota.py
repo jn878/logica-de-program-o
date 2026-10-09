@@ -5,11 +5,11 @@ nota_inserida = 0.0
 
 
 while True:
-            for i in range(2):
+        for i in range(2):
                 nota = float(input(f"digite a nota {i+1} "))
-            resposta = input("deseja inserir mais uma nota ? ")
-            media = nota * 2 / 3
-            match resposta:
+                resposta = input("deseja inserir mais uma nota ? ")
+                media = nota * 2 / 3
+        match resposta:
                 case "nao":
                         print(f"\nmedia {media}")
                         input("aperte enter pra limpar o terminal")

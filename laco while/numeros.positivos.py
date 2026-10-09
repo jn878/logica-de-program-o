@@ -1,15 +1,26 @@
 import os
 os.system("cls")
-contator = 0
-valor = 0
+
+
+soma = 0
+quantidade = 0
 
 while True:
-        for i in range(5):
-            valor = int(input(f"digite {i+1} valor positivo ")) / 3
-        if valor > 0:
-            print(f"valores positivos")
-        else:
-            print("valor negativo, reveja os valores")
-            break
+    try:
+        numero = int(input("Introduza um número inteiro positivo (ou um número negativo para encerrar): "))
+    except ValueError:
+        print("Por favor, introduza apenas números inteiros válidos.")
+        continue
 
-print(f"media{nota}")
+    if numero < 0:
+        break
+
+    soma += numero
+    quantidade += 1
+
+
+if quantidade > 0:
+    media = soma / quantidade
+    print(f"\nA media aritmética dos {quantidade} números introduzidos e: {media}")
+else:
+    print("\nNenhum número positivo foi introduzido.")

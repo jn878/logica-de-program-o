@@ -1,52 +1,54 @@
 import os
-os.system("cls")
 
-contador = 0
-total = 0
-total_fml = total + 1
+contador_famillias = 0
+quantidade_geral_filhos = 0
+soma_salario = 0
+maior_salario = 0
+menor_salario = 9999
 
+while True:
+    os.system('cls')
+    print('''
+=== MENU ===
+1 - Adicionar família
+2 - Sair e exibir resultados
+''')
+    opcao = int(input('Digite a opção desejada: '))
 
+    match opcao:
+        case 1:
+            print('=== CADASTRO ===')
+            salario = float(input('Digite o salário: R$ '))
+            numero_de_filhos = float(input('Digite a quantidade de filhos: '))
 
+            contador_famillias += 1
+            soma_salario += salario
+            quantidade_geral_filhos += numero_de_filhos
 
-for i in range (1000):
-    while True:
-        total = input("ola qual seu nome ? ")
-        filhos = int(input("quantos filhos voce tem ? "))
-        maior_salario = float(input("informe o maior salario da residencia "))
-        menor_salario = float(input("informe menor  salario da residencia "))
-        
-        print(""" 1 |adicionar familia|
-        2 |sair e exibir resultados|""")
-        
-        #variaveis
-        salarios_media = maior_salario * menor_salario / 3
-        media_filhos = filhos * filhos / 3
-        maior_salarios = maior_salario * 2 / 3
-        menor_salario = menor_salario * 2 / 3
-        contador = 0
-        total = 0
-        total_fml = total + 1
-
-        painel = int(input("qual das opções "))
-
-        match painel:
-            case 1:
-                            total = input("ola qual seu nome ? ")
-                            salarios = float(input("digite sua media salarial "))
-                            filhos = (input("quantos filhos voce tem ? "))
-                            maior_salario = (input("informe o maior salario da residencia "))
-                            menor_salario = input("informe menor  salario da residencia ")
-            case 2:
-                    print(f"total de familias que responderam a pesquisa = {total_fml}")
-                    print(f"medial salaria da populção {salarios_media}")
-                    print(f"media de numeros de filhos {media_filhos }")
-                    print(f"maior salario {maior_salario} ")
-                    print(f"menor salario "{menor_salario})
-        break
+            maior_salario = max(salario, maior_salario)
+            menor_salario = min(salario, menor_salario)
 
 
-salarios_media = maior_salario * menor_salario / 3
-media_filhos = filhos * filhos / 3
-maior_salarios = contador + 1
-menor_salario = contador + 1
+            print('\nFamília adicionada com sucesso!')
+            input('Pressione uma tecla para continuar...')
+        case 2:
+            break
+        case _:
+            print('\nOpção inválida! \n')
+            input('Pressione uma tecla para continuar...')
 
+if contador_famillias == 0:
+    print('\nNenhuma família cadastrada. \n')
+    input('Pressione uma tecla para continuar...')
+else:
+    media_salario = soma_salario / contador_famillias
+    media_numero_filhos = quantidade_geral_filhos / contador_famillias
+
+    print('\n=== RESULTADOS DA PESQUISA ===')
+    print(f'Total de famílias que responderam a pesquisa: {contador_famillias}')
+    print(f'Média de salário da população: R$ {media_salario}')
+    print(f'Média de número de filhos: {media_numero_filhos}')
+    print(f'Maior salário: {maior_salario}')
+    print(f'Menor salário: {menor_salario}')
+
+    input('\nPressione uma tecla para continuar...')

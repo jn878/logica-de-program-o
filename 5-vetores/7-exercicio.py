@@ -1,22 +1,16 @@
 import os
 
-vetor_numeros = []
-QUANTIDADE_DE_NUMEROS = 5
-soma_positivos = 0
-quantidade_impares = 0
+vetor_notas = []
+quantidade_nota = 2
 
+for i in range(quantidade_nota):
+    nota = float(input(f"digite a {i+1} nota " ))
+    vetor_notas.append(nota)
+    
+#"sum" somar tudo que esta no vetor
+media = sum(vetor_notas) / quantidade_nota
 
-for i in range (QUANTIDADE_DE_NUMEROS):
-    numero = int(input(f"digite o {i+1} numero "))
-    vetor_numeros.append(numero)
+for notas, nota in enumerate(vetor_notas, start=1):
+    print(f"{notas} nota : {nota}")
+    print(f"\nmedia: {media}")
 
-soma = sum(vetor_numeros)
-
-if numero > 0:
-    soma_positivos += numero
-
-if numero % 2 == 1:
-    quantidade_impares += 1
-
-print(f"soma = {soma_positivos}")
-print(f"quantidade de numeros impares {quantidade_impares}")

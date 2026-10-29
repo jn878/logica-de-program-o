@@ -1,17 +1,17 @@
 import os
 
-print("inserir numeros")
-vetor_numeros = []
 
-vetor_numeros.append(5)
-numero = int(input("digite um numero"))
+print("variaveis")
+variavel = 10
+variavel = 20
+print(f"valor da variavel: {variavel}")
 
-vetor_numeros.append(10)
-numero = int(input("digite um numero"))
+print("\n vetores")
+vetor = []
+vetor.append(10) #comando pra adicionar valor no vetor
+vetor.append(20)
+vetor.append(30)
+print(f"valor do vetor na posição 1: {vetor[0]}")
+print(f"valor do vetor na posição 2: {vetor[1]}")
+print(f"valor do vetor na posição 3: {vetor[2]}")
 
-vetor_numeros.append(15)
-numero = int(input("digite um numero"))
-
-print(" \nexibindo numeros do vetor ")
-print(f"primeira posição do vetor: {vetor_numeros[0]}")
-print(f"ultima posição do vetor: {vetor_numeros[2]}")

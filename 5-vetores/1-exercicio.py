@@ -1,11 +1,12 @@
 import os
 
-vetor_notas = []
 
-for i in range(3):
-    nota = float(input(f"digite a {i+1} nota" ))
-    vetor_notas.append(nota)
+vetor_nomes = []
 
-for notas, nota in enumerate(vetor_notas, start=1):
-    print(f"{notas} nota : {nota}")
+for i in range(5):
+    nome = (input("digite seu nome: "))
+    vetor_nomes.append(nome)
 
+
+for i in range(5):
+    print(f"nomes: {vetor_nomes}")

@@ -7,7 +7,6 @@ while True:
     print(""" Prime Video
         1- cadastrar serie
         2- pesquisar serie
-        3- ver series disponiveis
         0-sair do aplicativo
         """)
     
@@ -27,10 +26,16 @@ while True:
         case 2:
             serie = input("digite um nome de uma serie")
             if len == series_lista:
-                print(f"esta serie esta disponivel {serie}")
+                print(f"esta serie esta disponivel {len(serie)}")
                 print("pressione enter para sair")
+                input("pressione enter para continuar")
+                os.system("cls")
+
                 
-                
-                
+        case 0:
+            print("o programa foi encerrado")
+            break
+        case _:
+            print("algo deu errado")
             
             
